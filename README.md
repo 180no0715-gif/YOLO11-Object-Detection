@@ -1,8 +1,57 @@
-# YOLO11-Object-Detection
-基於 YOLO11s 之實時物件偵測系統，包含雲端訓練腳本與本地部署實作。
-# YOLO11-Object-Detection 專案
+# 基於 YOLO 之宿舍常見容器辨識系統
 
-本專案為大一資管系學生之實作作品，旨在實現從雲端訓練到本地端實時部署的完整 AI 物件偵測流程。
+本專案以 YOLO 物件辨識模型為核心，
+透過自行蒐集與標註宿舍常見容器影像，
+建立即時容器辨識系統。
+
+系統可辨識 Bottle、Can、Cup noodle、Snack 等類別，
+並整合攝影機串流進行即時推論。
+
+## 專案流程
+
+1. 自行拍攝宿舍常見容器照片
+2. 使用 Label Studio 進行資料標註
+3. 輸出 YOLO 格式資料集
+4. 於 Google Colab 進行模型訓練
+5. 使用 OpenCV 整合攝影機串流
+6. 於本地端環境進行即時辨識
+
+## 使用技術
+
+- Python
+- YOLOv11
+- OpenCV
+- Google Colab
+- Label Studio
+- Anaconda
+
+## 資料集
+
+資料集由本人自行拍攝，
+包含宿舍常見飲料與食品容器影像，
+並透過 Label Studio 完成標註。
+
+類別包含：
+- Bottle
+- Can
+- Cup noodle
+- Snack
+
+## 模型問題分析
+
+目前 Snack 類別辨識率較低，
+推測與樣本數不足及背景干擾有關。
+
+後續規劃：
+- 增加資料量
+- 導入資料增強
+- 加入負樣本訓練
+
+## 未來優化方向
+
+- 增加更多容器類別
+- 提升低光源辨識能力
+- 導入 Raspberry Pi 部署
 
 ## 🚀 技術亮點
 - **雲端運算**：利用 Google Colab 與 NVIDIA GPU 進行大規模迭代訓練。
