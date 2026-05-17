@@ -51,7 +51,6 @@
 
 - 增加更多容器類別
 - 提升低光源辨識能力
-- 導入 Raspberry Pi 部署
 
 ## 🚀 技術亮點
 - **雲端運算**：利用 Google Colab 與 NVIDIA GPU 進行大規模迭代訓練。
